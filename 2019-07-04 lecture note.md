@@ -194,6 +194,7 @@ CREATE TABLE customer(
 	phone varchar2 (20),
 	primary key (custid)
 );
+````
 
 ### Customer Å×ÀÌ÷ם INSERT
 ````
