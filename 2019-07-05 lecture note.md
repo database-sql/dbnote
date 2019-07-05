@@ -31,7 +31,7 @@ CREATE TABLE ex (
 ````
 INSERT INTO ex VALUES(1, '홍길동', 300);
 INSERT INTO ex VALUES(2, 박문수, 2000);
-INSERT INTO ex VALUES(3, '성춘향', 500);*/
+INSERT INTO ex VALUES(3, '성춘향', 500);
 ````
 
 * 테이블 이름 변경
