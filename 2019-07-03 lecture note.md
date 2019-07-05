@@ -161,7 +161,7 @@ SELECT last_name, hire_date, TO_CHAR(hire_date, 'yyyy mon dd day')
 FROM employees;
 ````
 
-#### NVL
+#### NVL(NULL값을 다른 값으로 대치)
 ````
 SELECT last_name, NVL(manager_id, '999')
 FROM employees;
@@ -173,7 +173,7 @@ SELECT employee_id, last_name, salary, manager_id, NVL2(manager_id, '부서있음', 
 FROM employees ;
 ````
 
-#### NULLIF(a,b)
+#### NULLIF(a,b) - a와 b가 동일하면 NULL, 그렇지 않으면 a 반환
 ````
 SELECT NULLIF(LENGTH(first_name), LENGTH(last_name))name
 FROM employees;
