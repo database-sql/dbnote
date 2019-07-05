@@ -1,4 +1,4 @@
 # dbnote
 database lecture note
 
-### 제목 3 사이즈 글씨 내용~
+### 제목 3 사이즈 글씨 내용~ 글씨 깨짐
