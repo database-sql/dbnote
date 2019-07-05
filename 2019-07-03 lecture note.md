@@ -4,7 +4,7 @@ database lecture note
 ## SELECT 구문
 ### SELECT
 ```` 
-SELECT [ALL | DISTINCT] 속성이름(들) 컬럼리스트
+**SELECT** [ALL | DISTINCT] 속성이름(들) 컬럼리스트
 FROM 테이블 이름
 employees 테이블로부터 아이디, 성, 이름을 조회하는 질의문
 ````
