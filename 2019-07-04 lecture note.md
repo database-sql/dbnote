@@ -18,7 +18,7 @@ FROM employees
 WHERE salary > 17000;
 ````
 
-### STEP 2.
+### STEP 2. (서브쿼리 사용)
 ````
 SELECT last_name, salary
 FROM employees
@@ -27,21 +27,6 @@ SELECT salary
 FROM employees
 WHERE last_name = 'Kochhar');
 ````
-
-### 단일행 서브쿼리
-````
-SELECT last_name, department_id, salary 
-FROM employees
-WHERE department_id = (
-SELECT department_id
-FROM employees
-WHERE employee_id = 101)
-AND salary > (
-SELECT salary
-FROM employees
-WHERE employee_id = 141);
-````
-
 ### 연습(가장 많은 급여를 받는 직원의 이름과 급여를 검색)
 * 부서별 최저 급여를 검색하되 부서명이 60인 부서의 최저 급여보다는 큰 값만 검색하라.
    * 서브쿼리를 사용하지 않고 한다면 먼저, 부서 아이디가 60인 부서의 최저 급여를 검색한다.
@@ -80,6 +65,20 @@ FROM employees
 GROUP BY department_id);
 ````
 
+### 단일행 서브쿼리
+````
+SELECT last_name, department_id, salary 
+FROM employees
+WHERE department_id = (
+SELECT department_id
+FROM employees
+WHERE employee_id = 101)
+AND salary > (
+SELECT salary
+FROM employees
+WHERE employee_id = 141);
+````
+
 ## TABLE SPACE 만들기
 1. TABLE SPACE (file의 형태로 존재)
 2. USER 생성
@@ -90,8 +89,10 @@ create tablespace 테이블스페이스이름
 datafile '데이터파일경로'
 size 초기사이즈
 autoextend on next 자동증가사이즈
-maxsize 최대사이즈;*/
-/*create tablespace madang
+maxsize 최대사이즈;
+````
+````
+create tablespace madang
 datafile 'D:\HongGilDong\madang.dbf'
 size 50M
 autoextend on next 10M
@@ -102,21 +103,23 @@ maxsize unlimited;
 create user 아이디 identified by 비밀번호 default tablespace;
 ````
 
-* 암호 변경
+* 암호 변경(실행 프로그램)
 ````
 sqlplus / as sysdba
 alter user system identified by 1234;
 ````
 ->user altered
 
+
 ### 권한 부여하기
 ````
 grant 권한리스트 to 아이디;
 ````
 * 참고.
-  * connect:로그인 권한
-  * resource: 자원을 사용할 수 있는 권한
-  * dba: db 관리자 권한
+ * connect:로그인 권한
+ * resource: 자원을 사용할 수 있는 권한
+ * dba: db 관리자 권한
+
 
 ### table space 생성 (실습)
 ````
@@ -143,7 +146,7 @@ default tablespace madang;
 grant connect, resource, dba to madang;
 ````
 
-### Book 테이블 생성 (실습)
+## Book 테이블 생성 (실습)
 ````
 CREATE TABLE book(
     bookid number(3),
@@ -154,7 +157,7 @@ CREATE TABLE book(
 );
 ````
 
-### 레코드 INSERTION
+## 레코드 INSERTION
 ````
 INSERT 구문
 INSERT INTO tablename
@@ -180,8 +183,9 @@ INSERT INTO book VALUES(7, '야구의 추억', '이상미디어', 20000);
 INSERT INTO book VALUES(8, '야구를 부탁해', '이상미디어', 13000);
 INSERT INTO book VALUES(9, '올림픽 이야기', '삼성당', 7500);
 INSERT INTO book VALUES(10, 'Olympic Champions', 'Pearson', 13000);
+````
 
-### Customer 테이블 생성
+## Customer 테이블 생성
 ````
 CREATE TABLE customer(
 	custid number(3),
@@ -200,7 +204,7 @@ INSERT INTO customer VALUES(4, '추신수', '미국 클리블랜드', '000-7000-0001');
 INSERT INTO customer VALUES(5, '박세리', '대한민국 대전', NULL);
 ````
 
-### Orders 테이블 생성
+## Orders 테이블 생성
 ````
 CREATE TABLE orders(
     orderid number(3),
@@ -221,8 +225,10 @@ CREATE TABLE...(
     .....
     PRIMARY KEY(주키속성명),
     FOREIGN KEY 외래키속성명 REFERNCES 테이블이름(속성이름)
-)*/
-/*CREATE TABLE orders(
+);
+````
+````
+CREATE TABLE orders(
     ....
     cutid number(3),
     ....
