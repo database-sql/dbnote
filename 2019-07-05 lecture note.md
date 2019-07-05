@@ -16,6 +16,7 @@ database lecture note
   * 인터넷 상에 나의 작업을 올려서 언제 어느 곳에서나 액세스 하고 다른 사람들과 자료를 공유할 수 있다.
 * md: mark down HTML - file을 심플하게 문서를 표현하는 방식
 
+
 ## 테이블 생성(+제약조건, Constraint)
 ````
 CREATE TABLE ex (
@@ -25,6 +26,7 @@ CREATE TABLE ex (
     primary key(id)
 );
 ````
+
 ## 레코드 INSERTION (with Constraints)
 ````
 INSERT INTO ex VALUES(1, '홍길동', 300);
