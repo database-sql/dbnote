@@ -30,7 +30,7 @@ CREATE TABLE ex (
 ## 레코드 INSERTION (with Constraints)
 ````
 INSERT INTO ex VALUES(1, '홍길동', 300);
-INSERT INTO ex VALUES(2, 박문수, 2000);
+INSERT INTO ex VALUES(2, '박문수', 2000); -> 오류 (2000)
 INSERT INTO ex VALUES(3, '성춘향', 500);
 ````
 
