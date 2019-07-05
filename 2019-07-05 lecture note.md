@@ -5,9 +5,9 @@ database lecture note
 * 시그마 : 셀렉션
 * 파이: 프로젝션
 * 로: 리네임
-* 카티전 프로덕트 : cross join
-* primary key는 null값을 허용하지 않음.
-* unique는 null 값을 허용. 속성 중복 값은 허용 X.
+* 카티전 프로덕트(cartesian product) : cross join
+* PRIMARY KEY는 NULL값을 허용하지 않음.
+* UNIQUE는 NULL 값을 허용. 속성 중복 값은 허용 X.
 * CHECK : 조건을 줄 수 있음.
 * cascade 뜻 : 종속
 
