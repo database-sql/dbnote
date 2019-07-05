@@ -155,7 +155,7 @@ FROM employees;
 * daytime의 주요인자(p. 212)
 
 ### 그 외
-#### TO_CHAR(date, datetime)
+#### TO_CHAR(date, datetime) - 날짜형을 문자형으로 변환
 ````
 SELECT last_name, hire_date, TO_CHAR(hire_date, 'yyyy mon dd day')
 FROM employees;
