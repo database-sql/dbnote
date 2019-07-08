@@ -123,16 +123,16 @@ WHERE no BETWEEN 2500 AND 6500;
 ````
 ALTER INDEX idx_test_no REBUILD;
 ````
-### MySql 사용(MySql workbench 설치)
-* mysql  
-   * use : database 생성
-   * show: oracle 에서의 SELECT
+### MySQL 사용(MySQL workbench 설치)
+* MySQL  
+   * use : Database 생성
+   * show: Oracle 에서의 SELECT
    * Administrative roles(메뉴) - 권한 설정, 하는 작업에 따라 설정.
 * charset/collation : data를 incoding 하는 방식 지정, 설정(안할 경우 글씨 깨짐)
 
 ### Oracle과의 차이점
-* MySql에서는 Database가 여러 개이기 때문에 만들 때 지정해주어야 함.
-* MySql에서는 Database 를 스키마로 지칭.
+* MySQL에서는 Database가 여러 개이기 때문에 만들 때 지정해주어야 함.
+* MySQL에서는 Database 를 스키마로 지칭.
 
 ### 구문 차이점 확인
 * www.oracletutorial.org
