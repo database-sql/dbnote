@@ -21,7 +21,7 @@ AS
 ````
 CREATE TABLE o_tbl(a NUMBER, b NUMBER, c NUMBER);
 ````
-### 3. 뷰 수정 1
+### 3. 뷰 수정
 ````
 CREATE OR REPLACE VIEW view1
 AS
@@ -81,7 +81,7 @@ AND o.bookid = b.bookid;
 * binary tree - 이진 트리, 이등분하며 정보를 찾아가는 방법
 * 속성의 선택도 낮음 -> 속성의 모든 값이 다르다는 뜻
 
-* OLTP (Online Transaction Processing) - 여러과정(또는 연산)이 하나의 단위 프로세스로 실행되도록 하는 프로세스
+* OLTP (Online Transaction Processing) - 여러 과정(또는 연산)이 하나의 단위 프로세스로 실행되도록 하는 프로세스
 * OLAP (Online Analytical Processing) - 다차원으로 이루어진 데이터로부터 통계적인 요약정보를 제공할 수 있는 기술
 
 ### 인덱스 생성
@@ -89,6 +89,7 @@ AND o.bookid = b.bookid;
 CREATE [REVERSE] |[UNIQUE] INDEX 인덱스 이름]
 ON 테이블이름 (컬럼 [ASC|DESC] [{컬럼 [ASC | DESC]} ...])[;]
 ````
+* 실습
 ````
 CREATE INDEX idx_test_no ON test(no);
 ````
@@ -104,7 +105,7 @@ END;
 /
 ````
 
-### 인덱스의 상태를 조회하는 방법
+#### 인덱스의 상태를 조회하는 방법
 ````
 ANALYZE INDEX idx_test_no VALIDATE STRUCTURE;
 SELECT (del_lf_rows_len / lf_rows_len)* 100 BALANCE
@@ -112,13 +113,13 @@ FROM index_stats
 WHERE name='IDX_TEST_NO';
 ````
 
-### INDEX 삭제
+### INDEX 삭제(연습)
 ````
 DELETE FROM test
 WHERE no BETWEEN 2500 AND 6500;
 ````
 
-### 인덱스를 리빌드
+### 인덱스를 리빌드(연습)
 ````
 ALTER INDEX idx_test_no REBUILD;
 ````
@@ -129,9 +130,9 @@ ALTER INDEX idx_test_no REBUILD;
    * Administrative roles(메뉴) - 권한 설정, 하는 작업에 따라 설정.
 * charset/collation : data를 incoding 하는 방식 지정, 설정(안할 경우 글씨 깨짐)
 
-### oracle과의 차이점
+### Oracle과의 차이점
 * MySql에서는 Database가 여러 개이기 때문에 만들 때 지정해주어야 함.
-* mysql에서는 database 를 스키마로 지칭.
+* MySql에서는 Database 를 스키마로 지칭.
 
 ### 구문 차이점 확인
 * www.oracletutorial.org
