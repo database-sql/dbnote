@@ -14,25 +14,25 @@ database lecture note
 #### 이상현상의 예
 ````
 CREATE TABLE summer(
-sid number,
-class varchar2(20),
-price number
+sid	number,
+class	varchar2(20),
+price	number
 );
 INSERT INTO summer VALUES (100,'FORTRAN', 20000);
 INSERT INTO summer VALUES (150,'PASCAL', 15000);
 INSERT INTO summer VALUES (200,'C', 10000);
 INSERT INTO summer VALUES (250,'FORTRAN', 20000);
+
 -- summer table 조회
 SELECT * FROM summer;
 ````
 ##### 삭제이상
-* 질의 7-1 200번 학생의 계절학기 수강신청을 취소하시오.
+* 질의 7-1. 200번 학생의 계절학기 수강신청을 취소하시오.
 ````
 -- C강좌 수강료 조회
 SELECT price "C 수강료"
 FROM summer
 WHERE class='C';
-*/
 
 -- 200번 학생의 수강신청 취소
 DELETE FROM summer
@@ -45,7 +45,7 @@ WHERE class='C';
 ````
 
 ##### 삽입이상
-* 질의 7-2 계절학기에 새로운 자바 강좌를 개설하시오.
+* 질의 7-2. 계절학기에 새로운 자바 강좌를 개설하시오.
 ````
 -- 자바 강좌 삽입
 INSERT INTO summer VALUES (NULL, 'JAVA', 25000);
@@ -103,8 +103,8 @@ FROM summerprice;
 
 -- summerenroll 테이블 생성
 CREATE TABLE summerenroll(
-sid number,
-class varchar2(20)
+sid	number,
+class	varchar2(20)
 );
 INSERT INTO summerenroll VALUES (100, 'FORTRAN');
 INSERT INTO summerenroll VALUES (150, 'PASCAL');
