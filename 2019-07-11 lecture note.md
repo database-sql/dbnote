@@ -54,7 +54,8 @@ public class A01_HelloWorld {
 > Ctrl + F : 찾기
 
 * 예제
-````package chapter2;
+````
+package chapter2;
 public class A01_Variable1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -65,6 +66,52 @@ public class A01_Variable1 {
 }
 ````
 
+* 예제
+````
+package chapter2;
+public class A01_Variable1 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int level = 10; // 정수형 변수 level 선언
+		// level = 10; // level 변수에 값 10을 대입
+		System.out.println(level);  // level 값 출력
+	}
+}
+````
+* code 실행 : Ctrl + F11
+* data type
+   * char - 문자
+   * int, long - 정수
+   * double, float - 실수
+
+* 타입, 변수명(예약어 X, ex) public, class 등); 
+* class의 이름은 반드시 대문자로 시작, 특수 문자는 '_', '$' 만.
+* 변수형은 일반적으로 소문자로 입력, 무엇을 담는 것인지 의미를 다 표현해 주는 것이 좋음.
+   * camel 표기 방법
+      * ex) levelOf Floor
+
+* '=' : 대입연산자, 할당 연산자(Assignment operator)
+* 중괄호{} 뒤에 주석표시 (coding 기본습관)
+   * ex) // end of main()
+
+* 문자 변수 선언과 값의 대입
+````
+package chapter2;
+
+public class A01_Variable1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int level; // 정수형 변수 level 선언
+		level = 10; // level 변수에 값 10을 대입
+		System.out.println(level);  // level 값 출력
+		
+		**// 문자 변수 선언과 값의 대입**
+		char chval = 'A'; // 문자 변수는 작은 따옴표로 감싼다.
+		System.out.println(chval);
+	}// end of main()
+}// end of class()
+````
 
 
 
