@@ -31,7 +31,7 @@ database lecture note
 * /* */: 여러 줄 주석처리
 * /** */: document 주석, 문서화 작업 시 사용
 
-* JAVA를 사용한다는 것은 class를 만든다는 것
+* JAVA를 사용한다는 것은 class를 만든다는 것(class 기반)
 * System: class 중 하나
 * println: 함수 중 하나
 
@@ -48,6 +48,39 @@ public class A01_HelloWorld {
 }
 // output: "안녕하세요"
 ````
+
+* class 의 소스를 보는 방법
+   * F3키 
+> Ctrl + F : 찾기
+
+* 예제
+````package chapter2;
+public class A01_Variable1 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int level; // 정수형 변수 level 선언
+		level = 10; // level 변수에 값 10을 대입
+		System.out.println(level);  // level 값 출력
+	}
+}
+````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
