@@ -105,13 +105,13 @@ System.out.println(chval);
 ````
 
 ### A02_Character
-* 데이터 타입
-   * 기본 자료형, 참조 자료형
-   * 기본자료형은 정수형, 문자형, 실수형, 논리형
-      * **정수형** : byte(1byte), short(2byte), int(4byte), long(8byte)
-      * **문자형** : char(1byte)
-      * **실수형** : float(4byte), double(4byte)
-      * **논리형** : boolean
+#### 데이터 타입
+* 기본 자료형, 참조 자료형
+* 기본자료형은 정수형, 문자형, 실수형, 논리형
+   * **정수형** : byte(1byte), short(2byte), int(4byte), long(8byte)
+   * **문자형** : char(1byte)
+   * **실수형** : float(4byte), double(4byte)
+   * **논리형** : boolean
 
 > Ctrl + Shift + / : 여러 줄 주석 처리.
 
@@ -123,6 +123,7 @@ System.out.println(chval);
 
 > sysout 입력 후,  Ctrl + space bar : System.out.prinln()
 
+##### 정수형(byte)
 * bit(binary digit) : 0, 1
 * byte : 256개, byte type
    * 1 byte 로 표현할 수 있는 숫자 범위 - 0~255 (byte의 유효숫자 범위는 -2^7 ~ 2^7-1)
@@ -143,6 +144,7 @@ public class A02_Character {
 ````
 byte b_num1 = 127;
 ````
+##### 정수형(short)
 * 2byte : short type(유효숫자 범위는 -2^15 ~ 2^15-1)
 > short의 유효숫자 표시
 ````
@@ -154,24 +156,25 @@ System.out.println(s_num2);
 int i_num3 = -2147483648;
 System.out.println(i_num3);
 ````
+##### 정수형(long)
 * 8byte : long type (유효숫자 범위 -2^63 ~ 2^63-1)
 
 > 응용하려는 분야에 따라서 해당 type를 선택해서 사용
 
-* Min, Max를 이용한 최소, 최대 값 표시
+#### Min, Max를 이용한 최소, 최대 값 표시
 > short
 ````
 System.out.println(Short.MIN_VALUE);
-		System.out.println(Short.MAX_VALUE);
+System.out.println(Short.MAX_VALUE);
 ````
 
 > int
 ````
 System.out.println(Integer.MIN_VALUE);
-		System.out.println(Integer.MAX_VALUE);
+System.out.println(Integer.MAX_VALUE);
 ````
 
-* 
+#### 혼합연산
 ````
 short sval = 1;
 int ival = 1;
@@ -184,6 +187,61 @@ System.out.println(ival + fval);
 // output: 2.0
 ````
 > 서로 다른 data type을 혼합 연산할 때 연산 결과는 범위가 큰 쪽으로 변환되어 처리된다.
+
+#### 문자형을 숫자형으로 강제 표현(아스키 코드값만 변환됨)
+````
+char ch1 = 'A';
+System.out.println(ch1);
+System.out.println((int)ch1);
+// output : 65
+````
+
+#### 숫자형을 문자형으로 강제 표현(아스키 코드값만 변환됨)
+````
+int ch2 = 66;
+System.out.println(ch2);
+System.out.println((char)ch2);
+````
+
+#### 한글(문자)를 숫자형으로 강제 표현(유니코드 값을 숫자값으로)
+````
+char ch3 = '가';
+System.out.println(ch3);
+System.out.println((int)ch3);
+````
+
+> unicode.org
+
+#### 유니코드 삽입 시
+````
+char ch3 = '\u1100';
+System.out.println(ch3);
+System.out.println((int)ch3);
+// output : ㄱ
+// output : 4352
+````
+> char type 은 ' '로 표시
+
+> char type은 양수만 인정.
+
+### A03_Double type(실수형 타입)
+> float 사용 시 값 뒤에 f 입력해야 함.
+````
+double dnum = 3.14;
+float  fnum = 3.14f;
+// output : 3.14
+// output : 3.14
+````
+
+#### 실수를 부동소수점으로 표현하면 생기는 문제
+````
+double dval = 1;
+for (int i = 0; i < 10000 ; i++) {
+	dval = dval + 0.1;
+}
+// output: 1001.000000000159
+````
+
 
 
 
