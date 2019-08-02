@@ -1,0 +1,12 @@
+https://chocolatey.org/install
+-> notes -> Install with cmd.exe -> copy
+-> cmd(관리자 권한으로 실행) ->오른쪽 버튼 클릭
+
+ojdbc
+다운로드 -> C: -> Program Files -> Java -> jdk -> jre -> lib -> ext 로 이동
+
+java와 oracle db 연결
+oracle jdbc 필요 (라이브러리)
+
+MYSQL connector
+
